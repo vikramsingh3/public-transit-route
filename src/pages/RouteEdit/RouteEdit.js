@@ -1,5 +1,5 @@
 import React from "react";
-import RouteForm from "../RouteForm/RouteForm";
+import RouteForm from "../../components/RouteForm/RouteForm";
 const RouteEdit = () => {
   return <RouteForm editMode />;
 };

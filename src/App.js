@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import CreateRoute from "./pages/CreateRoute/CreateRoute";
-import RouteEdit from "./components/RouteEdit/RouteEdit";
+import RouteEdit from "./pages/RouteEdit/RouteEdit";
 import RouteView from "./pages/RouteView/RouteView";
 import NotFound from "./pages/NotFound/NotFound";
 
