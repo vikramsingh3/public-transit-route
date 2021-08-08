@@ -1,0 +1,28 @@
+.Stops__title {
+  margin: 0;
+}
+.Stops__errorMessage {
+  color: #b9230c;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.Stops__ul {
+  list-style: none;
+  padding: 0;
+}
+
+.Stops__li {
+  background-color: #efe2ba;
+  padding: 8px;
+  margin: 16px;
+}
+
+.Stops__li:hover {
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+.Stops__delete {
+  float: right;
+  margin: 4px;
+  cursor: pointer;
+}
