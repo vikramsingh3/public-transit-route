@@ -28,6 +28,7 @@ const RouteForm = ({ history, editMode }) => {
     } else {
       setReady(true);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (!isReady) return null;

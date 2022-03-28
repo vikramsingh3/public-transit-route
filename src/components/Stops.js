@@ -50,7 +50,7 @@ const Stops = ({ grabStops, errorMessage, stops }) => {
         {stopList.map((stop) => (
           <li
             key={stop.stopId}
-            className="bg-amber-300 px-4 py-1 rounded text-green-600 font-bold flex flex-row items-center justify-between"
+            className="bg-amber-300 px-4 py-1 rounded text-green-600 font-bold flex flex-row items-center justify-between hover:scale-105 transition duration-200"
           >
             <span>{stop.stopName}</span>
             <FontAwesomeIcon

@@ -9,7 +9,7 @@ const RouteList = ({ routeList, deleteRouteFunction }) => {
         return (
           <li
             key={routeId}
-            className="bg-green-600 p-10 rounded text-white shadow flex flex-col gap-4"
+            className="bg-green-600 p-10 rounded text-white shadow flex flex-col gap-4 hover:scale-110 transition"
           >
             <div className=" text-2xl">{routeName}</div>
             <div>{status}</div>

@@ -4,12 +4,16 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div className="bg-amber-300 px-5 py-4  flex items-center justify-between">
+    <div className="bg-amber-300 px-5 py-4  flex items-center justify-between ">
       <Link
         to="/"
         className="flex items-center text-green-600 hover:text-green-700"
       >
-        <img src={BrandLogo} alt="Brand Logo" className="h-8 mr-5"></img>
+        <img
+          src={BrandLogo}
+          alt="Brand Logo"
+          className="h-8 mr-5 hover:rotate-180 transition duration-500"
+        ></img>
         <span className=" text-lg font-bold">Public Transit Route</span>
       </Link>
       <Link
