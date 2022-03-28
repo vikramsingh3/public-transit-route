@@ -1,26 +1,28 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./RouteList.css";
 
 const RouteList = ({ routeList, deleteRouteFunction }) => {
   return (
-    <ul className="RouteList">
+    <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
       {routeList.map((route) => {
         const { routeId, routeName, status } = route;
         return (
-          <li key={routeId} className="RouteList__item">
-            <span className="RouteList__name">{routeName}</span>
-            <span className="RouteList__status">{status}</span>
-            <div className="RouteList__buttons">
+          <li
+            key={routeId}
+            className="bg-green-600 p-10 rounded text-white shadow flex flex-col gap-4"
+          >
+            <div className=" text-2xl">{routeName}</div>
+            <div>{status}</div>
+            <div className="flex gap-2">
               <Link
                 to={"/route-view/" + routeId}
-                className="Button Button_primary"
+                className="px-3 py-2 rounded bg-amber-300 hover:bg-amber-400 text-green-600 font-semibold"
               >
                 View
               </Link>
               <Link
                 to={"/route-edit/" + routeId}
-                className="Button Button_secondary"
+                className="px-3 py-2 rounded border-2 border-amber-300 hover:border-amber-400 text-amber-300 hover:text-amber-400 font-semibold"
               >
                 Edit
               </Link>
@@ -28,7 +30,7 @@ const RouteList = ({ routeList, deleteRouteFunction }) => {
                 onClick={() => {
                   deleteRouteFunction(routeId);
                 }}
-                className="Button Button_danger"
+                className="px-3 py-2 rounded bg-red-500 hover:bg-red-600 text-white font-semibold"
               >
                 Delete
               </button>

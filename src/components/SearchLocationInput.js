@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import "./SearchLocationInput.css";
 
 let autoComplete;
 
@@ -28,7 +27,7 @@ const SearchLocationInput = ({ onPlaceSelect }) => {
   return (
     <div className="SearchLocationInput">
       <input
-        className="SearchLocationInput__inputBox"
+        className="outline-amber-300 text-green-600 rounded font-bold px-2 py-1 w-full"
         ref={autoCompleteRef}
         onChange={(event) => setQuery(event.target.value)}
         placeholder="Enter a Location"

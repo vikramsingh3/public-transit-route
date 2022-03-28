@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import RouteList from "../../components/RouteList/RouteList";
-import axiosAPI from "../../shared/Axios";
-
-import "./Home.css";
+import RouteList from "../components/RouteList";
+import axiosAPI from "../shared/Axios";
 
 const Home = () => {
   const [routeList, setRouteList] = useState([]);
@@ -33,15 +30,7 @@ const Home = () => {
     populateRoutesList();
   }, []);
 
-  return (
-    <div className="Home">
-      <div className="Home__title">Public Transit Route</div>
-      <Link to="/create-route" className="Button Button_primary">
-        Create new route
-      </Link>
-      <RouteList routeList={routeList} deleteRouteFunction={onDelete} />
-    </div>
-  );
+  return <RouteList routeList={routeList} deleteRouteFunction={onDelete} />;
 };
 
 export default Home;

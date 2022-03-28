@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
-import SearchLocationInput from "../SearchLocationInput/SearchLocationInput";
-import "./Stops.css";
+import SearchLocationInput from "./SearchLocationInput";
 
 const Stops = ({ grabStops, errorMessage, stops }) => {
   const [stopList, setStopList] = useState([...stops]);
@@ -39,20 +38,27 @@ const Stops = ({ grabStops, errorMessage, stops }) => {
   }, [stopList]);
 
   return (
-    <div className="Stops">
-      <p className="Stops__title">Search and select a place to add as "STOP"</p>
+    <div className="bg-green-700 p-6 md:p-10 rounded-lg">
+      <p className="font-bold">Search and select a place to add as "STOP"</p>
       <SearchLocationInput onPlaceSelect={addPlaceAsStop} />
-      <p className="Stops__errorMessage">{errorMessage}</p>
-      <ul className="Stops__ul">
+      {errorMessage && (
+        <span className="bg-red-600 rounded px-3 py-0 text-xs my-3">
+          {errorMessage}
+        </span>
+      )}
+      <ul className="flex flex-col gap-2 mt-4">
         {stopList.map((stop) => (
-          <li key={stop.stopId} className="Stops__li">
+          <li
+            key={stop.stopId}
+            className="bg-amber-300 px-4 py-1 rounded text-green-600 font-bold flex flex-row items-center justify-between"
+          >
             <span>{stop.stopName}</span>
             <FontAwesomeIcon
               icon={faTimes}
               onClick={() => {
                 deleteStop(stop.stopId);
               }}
-              className="Stops__delete"
+              className="cursor-pointer"
             />
           </li>
         ))}

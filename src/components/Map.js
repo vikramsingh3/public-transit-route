@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import "./Map.css";
 
 const Map = ({ stops, direction }) => {
   const mapRef = useRef(null);
@@ -42,8 +41,8 @@ const Map = ({ stops, direction }) => {
   }, []);
 
   return (
-    <div className="Map">
-      <div ref={mapRef} className="Map__div"></div>
+    <div className="rounded border-2 border-green-600 shadow">
+      <div ref={mapRef} className="h-full min-h-[400px] md:min-h-full"></div>
     </div>
   );
 };
